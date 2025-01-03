@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Poppins;
+    font-weight: 700;
+    scroll-behavior: smooth;
+}
+body{
+    height: 100vh;
+}
+nav{
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6em;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2em;
+}
+.winner{
+    margin-top: 0.5em;
+    font-size: 1.4em;
+}
+.turns{
+    display: flex;
+    border: 2px solid;
+    position: relative;
+}
+.t{
+    border: 2px solid;
+    text-align: center;
+    width: 3.1em;
+    border: 0;
+}
+
+.x{
+    border-right: 1px solid black;
+    
+}
+.o{
+    border-left: 1px solid black;
+}
+.container{
+    display: flex;
+    position: relative;
+}
+.boxes{
+    font-size: 3.4em;
+    display: flex;
+    height: 1.5em;
+    width: 1.5em;
+    justify-content: center;
+    font-weight: 600;
+    align-items: center;
+}
+.two,.eight,.five{
+    border-left: 3.5px solid black;
+    border-right: 3.5px solid black;
+}
+.four,.five,.six{
+    border-top: 3.5px solid black;
+    border-bottom: 3.5px solid black;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2em;
+}
+.lcon{
+    position: absolute;
+    height: 15.9em;
+    width: 15.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+.line{
+    visibility:hidden;
+    width: 11em;
+    margin-top: 2.3em;
+    margin-bottom: 2.6em;
+    border-radius: 20em;
+    animation: opa 1s ease-in-out;
+}
+body{
+    overflow: hidden;
+}
+.boxes:hover{
+    cursor: pointer;
+}
+.selection{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #ec10b5,rgb(127, 31, 156), rgb(10, 67, 149));
+}
+.selection>.d{
+    display: flex;
+    height: 20em;
+    width: 40vw;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sx{
+    padding: 0em 1em;
+    font-size: 4em;
+    color: #00BFFF;
+    background-color: rgb(225, 56, 90);
+    border-radius: 10px;
+}
+.sx:hover{
+    cursor: pointer;
+    background-color: rgb(254, 70, 100);
+}
+.so{
+    font-size: 4em;
+    padding: 0em 1em;
+    color: rgb(238, 60, 90);
+    background-color: #00BFFF;
+    border-radius: 10px;
+}
+.so:hover{
+    cursor: pointer;
+    background-color: #1495c1;
+}
+.text{
+    text-align: center;
+    padding: 2em;
+    font-size: 1.9em;
+    color: rgb(255, 255, 0);
+    height: 2em;
+    width: 10em;
+}
+.outer{
+    position: relative;
+    animation: ani 2s ease-in-out 1 forwards ;
+    height: 200vh;
+}
+@media only screen and (orientation:landscape){
+    .selection>.d{
+        gap:2em;
+    }
+}
+button{
+    padding: 1em;
+    color: white;
+    background-color: rgb(28, 119, 200);
+    border-radius: 15px;
+    border: 0;
+    display: none;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #00BFFF;
+}
